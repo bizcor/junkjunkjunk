@@ -12,4 +12,4 @@ Send a text message to **+1 415 801 0700**.  Go ahead.  Do it!
 | any word in ['rock', 'paper', 'scissors', 'lizard', 'spock']  | you'll play the game |
 | anything else | you'll get a message indicating your response was not understood |
 
-Note that if you send the word 'help' you'll get the help message as long as what delivers the text to my Twilio phone number above doesn't intercept it and show you *their* help message.
+Note that if you send the word 'help' you'll get the help message as long as whatever delivers the text to my Twilio phone number above doesn't intercept it and show you *their* help message.  That is, if my app gets 'help' it will send you a help message.  But my experience has been that 'help' doesn't get to my app.
