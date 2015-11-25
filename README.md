@@ -51,7 +51,7 @@ optional arguments:
 ###Example:
 
 ```
-$ ~/projects/bizcor/duplicates/bin/dupscan.py --start-directory venv --field-separator : | head
+$ ~/projects/bizcor/duplicates/bin/dupscan.py --start-directory venv --field-separator :
 manna.local:55f319165970063a80c24d028319341e:16777220:18420306:1:2232:venv/bin/activate
 manna.local:164322f70b9d567024e90c2080cef64d:16777220:18420309:1:1258:venv/bin/activate.csh
 manna.local:1177f4ed4cb63e5c01276be4d1a8a43a:16777220:18420307:1:2471:venv/bin/activate.fish
@@ -62,5 +62,5 @@ manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420175:1:221:venv/bin/pi
 manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420176:1:221:venv/bin/pip2
 manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420177:1:221:venv/bin/pip2.7
 manna.local:7c9961756d04568ed2717ff1250b0c90:16777220:18418837:1:25152:venv/bin/python
-```
 [...]
+```
