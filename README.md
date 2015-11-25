@@ -37,7 +37,8 @@ scan files in a tree and print a line of information about each regular file
 optional arguments:
   -h, --help            show this help message and exit
   --file FILE, -f FILE  File(s) from which to read data. The default is to
-                        read from stdin.
+                        read from stdin. To mix stdin and files, specify stdin
+                        as a file called "__stdin__"
   --field-separator FIELD_SEPARATOR, -s FIELD_SEPARATOR
                         Specify the string to use as a field separator in
                         output. The default is the ascii nul character.
