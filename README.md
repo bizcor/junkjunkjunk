@@ -51,7 +51,7 @@ optional arguments:
 ###Example:
 
 ```
-$ ~/projects/bizcor/duplicates/bin/dupscan.py --start-directory venv --field-separator :
+$ dupscan.py --start-directory venv --field-separator :
 manna.local:55f319165970063a80c24d028319341e:16777220:18420306:1:2232:venv/bin/activate
 manna.local:164322f70b9d567024e90c2080cef64d:16777220:18420309:1:1258:venv/bin/activate.csh
 manna.local:1177f4ed4cb63e5c01276be4d1a8a43a:16777220:18420307:1:2471:venv/bin/activate.fish
@@ -63,4 +63,23 @@ manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420176:1:221:venv/bin/pi
 manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420177:1:221:venv/bin/pip2.7
 manna.local:7c9961756d04568ed2717ff1250b0c90:16777220:18418837:1:25152:venv/bin/python
 [...output truncated for readability in this README.]
+
+$ dupscan.py -d venv | parsedups.py --list | wc -l
+parsedups.py: args => {'files': [], 'list_fields': True, 'size': 0, 'field_separator': '\x00'}
+     698
+```
+
+If I indicate it should list files of size 100,000 bytes or greater:
+
+```
+$ dupscan.py -d venv | parsedups.py --list --size 100000
+parsedups.py: args => {'files': [], 'list_fields': True, 'size': 100000, 'field_separator': '\x00'}
+manna.local  fb0e405e7b3311dd6a46cf5918d41bf1      133353    18419337  venv/lib/python2.7/site-packages/pkg_resources/__init__.pyc
+manna.local  4ea2a802c8f2188dcff76e40c0ec77e2      106466    18419911  venv/lib/python2.7/site-packages/pip/_vendor/pkg_resources/__init__.py
+manna.local  3578983e05e8367767122054b8e40ad1      113855    18419961  venv/lib/python2.7/site-packages/pip/_vendor/requests/packages/chardet/big5freq.pyc
+manna.local  eb9de34540cc21712b38f555ad3415bb      134764    18419912  venv/lib/python2.7/site-packages/pip/_vendor/pkg_resources/__init__.pyc
+manna.local  aeaceddba964d9486b92c111ee77c2b0      106670    18419336  venv/lib/python2.7/site-packages/pkg_resources/__init__.py
+manna.local  ffb367a1b27f407fe02ecd0a8cbefc35      117347    18419810  venv/lib/python2.7/site-packages/pip/_vendor/html5lib/html5parser.py
+manna.local  6f58f7b3d7b46120dfa9839a15e2ef4e      136381    18419811  venv/lib/python2.7/site-packages/pip/_vendor/html5lib/html5parser.pyc
+manna.local  cc3d2cd6b035dc31b2614c1df204848e      308434    18419933  venv/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem
 ```
