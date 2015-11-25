@@ -50,6 +50,8 @@ optional arguments:
 
 ###Examples:
 
+I'll process a random venv directory for some examples:
+
 ```
 $ dupscan.py --start-directory venv --field-separator : | wc -l
      698
@@ -86,7 +88,7 @@ manna.local  6f58f7b3d7b46120dfa9839a15e2ef4e      136381    18419811  venv/lib/
 manna.local  cc3d2cd6b035dc31b2614c1df204848e      308434    18419933  venv/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem
 ```
 
-We see that there are no duplicates 100,000 bytes or more in size.
+We see that there are no duplicates 100,000 bytes or more in size:
 
 ```
 $ ~/projects/bizcor/duplicates/bin/dupscan.py -d venv | ~/projects/bizcor/duplicates/bin/parsedups.py --size 100000
