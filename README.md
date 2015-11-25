@@ -1,7 +1,7 @@
 # duplicates
 
 Python code to detect duplicate files.  My definition of duplicates is two files that do not share an inode, but have the same md5 checksum.
-Duplicates can be detected within filesystems or across filesystems, whether or not they're on the same host.
+Duplicates can be detected within filesystems or across filesystems, on the same host, or across hosts.  I wrote the code to identify multiple locations of large data files so I could delete the duplicates and reclaim filesystem space.
 
 The idea is to scan one or more filesystem trees and then parse the data, reporting on which files are duplicates, as defined above.
 
