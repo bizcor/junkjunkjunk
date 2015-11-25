@@ -25,3 +25,5 @@ optional arguments:
                         Specify the string to use as a field separator in
                         output. The default is the ascii nul character.
 ```
+
+**parsedus.py** takes input from stdin or files or both.  It expects each line to be of the format of lines created by dupscan.py.
