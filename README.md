@@ -7,6 +7,6 @@ A python flask application that uses Twilio and multimedia messaging to play the
 Send a text message to +1 415 801 0700.
 
 | If you send this text | Here's what will happen |
-| --------------------- |:-----------------------:|
+| :-------------------- |:------------------------|
 | apphelp | you'll get a help message |
 | any word in ['rock', 'paper', 'scissors', 'lizard', 'spock']  | you'll play the game |
