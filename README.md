@@ -47,3 +47,5 @@ optional arguments:
   --list-fields, -l     Print data for all files whether or not they're
                         duplicates
 ```
+
+###Example:
