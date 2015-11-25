@@ -38,7 +38,8 @@ optional arguments:
   -h, --help            show this help message and exit
   --file FILE, -f FILE  File(s) from which to read data. The default is to
                         read from stdin. To mix stdin and files, specify stdin
-                        as a file called "__stdin__"
+                        as a file called "__stdin__". For example: --file
+                        __stdin__ --file my-file --file my-other-file
   --field-separator FIELD_SEPARATOR, -s FIELD_SEPARATOR
                         Specify the string to use as a field separator in
                         output. The default is the ascii nul character.
