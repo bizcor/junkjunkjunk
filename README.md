@@ -62,5 +62,5 @@ manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420175:1:221:venv/bin/pi
 manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420176:1:221:venv/bin/pip2
 manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420177:1:221:venv/bin/pip2.7
 manna.local:7c9961756d04568ed2717ff1250b0c90:16777220:18418837:1:25152:venv/bin/python
-[...]
+[...output truncated for readability in this README.]
 ```
