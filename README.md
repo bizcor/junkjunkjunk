@@ -85,3 +85,25 @@ manna.local  ffb367a1b27f407fe02ecd0a8cbefc35      117347    18419810  venv/lib/
 manna.local  6f58f7b3d7b46120dfa9839a15e2ef4e      136381    18419811  venv/lib/python2.7/site-packages/pip/_vendor/html5lib/html5parser.pyc
 manna.local  cc3d2cd6b035dc31b2614c1df204848e      308434    18419933  venv/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem
 ```
+
+We see that there are no duplicates 100,000 bytes or more in size.
+
+```
+$ ~/projects/bizcor/duplicates/bin/dupscan.py -d venv | ~/projects/bizcor/duplicates/bin/parsedups.py --size 100000
+parsedups.py: args => {'files': [], 'list_fields': False, 'size': 100000, 'field_separator': '\x00'}
+```
+
+But there are some 10,000 bytes or more:
+
+```
+$ ~/projects/bizcor/duplicates/bin/dupscan.py -d venv | ~/projects/bizcor/duplicates/bin/parsedups.py --size 10000
+parsedups.py: args => {'files': [], 'list_fields': False, 'size': 10000, 'field_separator': '\x00'}
+manna.local  4ffe71fb39c0bec005ef454f84403a35       28079    18419350  venv/lib/python2.7/site-packages/pkg_resources/_vendor/packaging/specifiers.py
+manna.local  4ffe71fb39c0bec005ef454f84403a35       28079    18419906  venv/lib/python2.7/site-packages/pip/_vendor/packaging/specifiers.py
+manna.local  3e8b4f33d9750ce201facbf437b8d0ad       11949    18419908  venv/lib/python2.7/site-packages/pip/_vendor/packaging/version.py
+manna.local  3e8b4f33d9750ce201facbf437b8d0ad       11949    18419352  venv/lib/python2.7/site-packages/pkg_resources/_vendor/packaging/version.py
+manna.local  e97c622b03fb2a2598bf019fbbe29f2c       65536    18419371  venv/lib/python2.7/site-packages/setuptools/gui-32.exe
+manna.local  e97c622b03fb2a2598bf019fbbe29f2c       65536    18419374  venv/lib/python2.7/site-packages/setuptools/gui.exe
+manna.local  a32a382b8a5a906e03a83b4f3e5b7a9b       65536    18419359  venv/lib/python2.7/site-packages/setuptools/cli-32.exe
+manna.local  a32a382b8a5a906e03a83b4f3e5b7a9b       65536    18419362  venv/lib/python2.7/site-packages/setuptools/cli.exe
+```
