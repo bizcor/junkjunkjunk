@@ -26,4 +26,4 @@ optional arguments:
                         output. The default is the ascii nul character.
 ```
 
-**parsedups.py** takes input from stdin or files or both.  It expects each line to be of the format of lines created by dupscan.py.
+**parsedups.py** takes input from stdin or files or both.  It expects each line to be of the format of lines created by dupscan.py.  It reads the data for all input sources into memory and outputs information on any duplicate files it detects.
