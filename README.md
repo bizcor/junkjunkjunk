@@ -48,21 +48,23 @@ optional arguments:
                         duplicates
 ```
 
-###Example:
+###Examples:
 
 ```
-$ dupscan.py --start-directory venv --field-separator :
-manna.local:55f319165970063a80c24d028319341e:16777220:18420306:1:2232:venv/bin/activate
-manna.local:164322f70b9d567024e90c2080cef64d:16777220:18420309:1:1258:venv/bin/activate.csh
-manna.local:1177f4ed4cb63e5c01276be4d1a8a43a:16777220:18420307:1:2471:venv/bin/activate.fish
-manna.local:0f55d499ffc698e5356ec8371f3a9904:16777220:18420308:1:1137:venv/bin/activate_this.py
-manna.local:94a7cdf617c44f10f0ee2e7280bab91e:16777220:18419457:1:249:venv/bin/easy_install
-manna.local:94a7cdf617c44f10f0ee2e7280bab91e:16777220:18419458:1:249:venv/bin/easy_install-2.7
-manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420175:1:221:venv/bin/pip
-manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420176:1:221:venv/bin/pip2
-manna.local:38eb18ad8ad9ac2cfffa15fb13de8537:16777220:18420177:1:221:venv/bin/pip2.7
-manna.local:7c9961756d04568ed2717ff1250b0c90:16777220:18418837:1:25152:venv/bin/python
-[...output truncated for readability in this README.]
+$ dupscan.py --start-directory venv --field-separator : | wc -l
+     698
+
+$ dupscan.py --start-directory venv --field-separator : | tail
+manna.local:97c5c7dbc7907fcc8a0aa689ee9afb0b:16777220:18420293:1:15233:venv/lib/python2.7/site-packages/wheel/tool/__init__.pyc
+manna.local:5dc3482b782c00465107147dccf06381:16777220:18420295:1:8064:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/DESCRIPTION.rst
+manna.local:177fe9e411e4f3d4b66fe0e633caf556:16777220:18420296:1:107:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/entry_points.txt
+manna.local:9d66b41bc2a080e7174acc5dffecd752:16777220:18420297:1:1125:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/LICENSE.txt
+manna.local:0fa17c98635ebfaf72c46eb5ff31247a:16777220:18420298:1:9117:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/METADATA
+manna.local:b669361941982cc1d520c77503d688b3:16777220:18420299:1:1510:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/metadata.json
+manna.local:2af2a25a164ae2c0b07461727cfcbda2:16777220:18420305:1:4930:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/RECORD
+manna.local:c1f70e1426eb3d219550b814c06c239e:16777220:18420301:1:364:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/RECORD.jws
+manna.local:ef72659542687b41fb1a4225120f41fa:16777220:18420302:1:6:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/top_level.txt
+manna.local:7443a0e34e1cdfcb5294578ac7fed8a3:16777220:18420303:1:110:venv/lib/python2.7/site-packages/wheel-0.24.0.dist-info/WHEEL
 
 $ dupscan.py -d venv | parsedups.py --list | wc -l
 parsedups.py: args => {'files': [], 'list_fields': True, 'size': 0, 'field_separator': '\x00'}
