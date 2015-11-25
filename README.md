@@ -4,7 +4,7 @@ A python flask application that uses Twilio and multimedia messaging to play the
 
 ## How to play
 
-Send a text message to +1 415 801 0700.
+Send a text message to **+1 415 801 0700**.  Go ahead.  Do it!
 
 | If you send this text | Here's what will happen |
 | :-------------------- |:------------------------|
