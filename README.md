@@ -8,6 +8,5 @@ Send a text message to +1 415 801 0700.
 
 | If you send this text | You will get   |
 | --------------------- |:--------------:|
-| help                  | a help message |
-| help me               | a help message |
 | apphelp               | a help message |
+| any word in ['rock', 'paper', 'scissors', 'lizard', 'spock'  | a help message |
