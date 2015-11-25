@@ -11,4 +11,17 @@ The idea is to scan one or more filesystem trees and then parse the data, report
 
 *HOSTNAME : MD5_CHECKSUM : FILESYSTEM_DEVICE_NUMBER : INODE_NUMBER : SIZE_IN_BYTES : PATH*
 
+```
+usage: dupscan.py [-h] [-d START_DIRECTORY] [-s FIELD_SEPARATOR]
 
+scan files in a tree and print a line of information about each regular file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d START_DIRECTORY, --start-directory START_DIRECTORY
+                        Specify the root of the filesystem tree to be
+                        processed. The default is the current directory.
+  -s FIELD_SEPARATOR, --field-separator FIELD_SEPARATOR
+                        Specify the string to use as a field separator in
+                        output. The default is the ascii nul character.
+```
