@@ -50,7 +50,7 @@ optional arguments:
 
 ###Examples:
 
-I'll process a random venv directory for some examples:
+Let's process a random venv directory for some examples:
 
 ```
 $ dupscan.py --start-directory venv --field-separator : | wc -l
