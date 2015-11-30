@@ -26,9 +26,8 @@ Many do.  But here are some advantages of using snap:
 
 ## Examples
 
-In the first example, I include for processing a non-existent file, a device file, a file in the root directory that my non-privileged user can't write to, a non-readble file (perms 0), and two other files.
-
 ```
+     # includes a non-existent file, a device file, a root directory file, and a non-readble file
 $ snap zzzzz /dev/null /installer.failurerequests ~/tmp/noread ~/bin/gpgedit gmvault.log ; echo status=$?
 snap: skipping 'zzzzz': can't stat
 snap: skipping '/dev/null': not regular file
@@ -38,16 +37,19 @@ snap: skipping '/Users/blarf/tmp/noread': no read permission
 ./gmvault.log.20141231.211200-0800
 status=1
 
+     # specify directory for copies
 $ snap -d /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?
 /var/tmp/gpgedit.20140928.154916-0800
 /var/tmp/gmvault.log.20141231.211200-0800
 status=0
 
+     # indicate that current time should be used rather than mtimes of original files
 $ snap -nd /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?
 /var/tmp/gpgedit.20151130.125757-0800
 /var/tmp/gmvault.log.20151130.125757-0800
 status=0
 
+     # use different time zone
 $ (export TZ=GMT ; snap -d /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?)
 /var/tmp/gpgedit.20140928.224916+0000
 /var/tmp/gmvault.log.20150101.051200+0000
