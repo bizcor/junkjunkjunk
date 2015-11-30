@@ -6,4 +6,4 @@ snap is a shell program that creates timestamped copies of files.
 
 Why not just do this?
 
-`$ cp myfile myfile.bak`
+```$ cp myfile myfile.bak```
