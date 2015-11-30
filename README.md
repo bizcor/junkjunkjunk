@@ -13,4 +13,4 @@ Many do.  But here are some advantages of using snap:
 * snap preserves file ownership(*)
 * snap preserves file mtime(*)
 
-  [*] given sufficient privilege
+[*] given sufficient privilege
