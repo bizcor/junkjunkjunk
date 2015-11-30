@@ -26,7 +26,7 @@ Many do.  But here are some advantages of using snap:
 
 ## Examples
 
-In the first example, I include for processing a non-existent file, a device file, a file in the root directory that my non-privileged user can't write to, a non-readble file (perms 0), and two other files capable of being processed.
+In the first example, I include for processing a non-existent file, a device file, a file in the root directory that my non-privileged user can't write to, a non-readble file (perms 0), and two other files.
 
 ```
 $ snap zzzzz /dev/null /installer.failurerequests ~/tmp/noread ~/bin/gpgedit gmvault.log ; echo status=$?
