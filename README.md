@@ -29,24 +29,27 @@ Many do.  But here are some advantages of using snap:
 In the first example, I include for processing a non-existent file, a device file, a file in the root directory that my non-privileged user can't write to, a non-readble file (perms 0), and two other files capable of being processed.
 
 ```
-$ snap zzzzz /dev/null /installer.failurerequests ~/tmp/noread ~/bin/gpgedit ./snap ; echo status=$?
+$ snap zzzzz /dev/null /installer.failurerequests ~/tmp/noread ~/bin/gpgedit gmvault.log ; echo status=$?
 snap: skipping 'zzzzz': can't stat
 snap: skipping '/dev/null': not regular file
 snap: skipping '/installer.failurerequests': cannot write to directory '/'
-snap: skipping '/Users/someuser/tmp/noread': no read permission
-/Users/someuser/bin/gpgedit.20140928.154916-0800
-snap.20151130.115442-0800
+snap: skipping '/Users/blarf/tmp/noread': no read permission
+/Users/blarf/bin/gpgedit.20140928.154916-0800
+./gmvault.log.20141231.211200-0800
 status=1
 
-     # specify a directory
-$ snap -d /var/tmp ~/bin/gpgedit ./snap ; echo status=$?
+$ snap -d /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?
 /var/tmp/gpgedit.20140928.154916-0800
-/var/tmp/snap.20151130.115442-0800
+/var/tmp/gmvault.log.20141231.211200-0800
 status=0
 
-     # use the current time in the timestamps rather than the mtimes of the files
-$ snap -nd /var/tmp ~/bin/gpgedit ./snap ; echo status=$?
-/var/tmp/gpgedit.20151130.122659-0800
-/var/tmp/snap.20151130.122659-0800
+$ snap -nd /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?
+/var/tmp/gpgedit.20151130.125757-0800
+/var/tmp/gmvault.log.20151130.125757-0800
+status=0
+
+$ (export TZ=GMT ; snap -d /var/tmp ~/bin/gpgedit gmvault.log ; echo status=$?)
+/var/tmp/gpgedit.20140928.224916+0000
+/var/tmp/gmvault.log.20150101.051200+0000
 status=0
 ```
