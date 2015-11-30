@@ -1,6 +1,6 @@
 # snap
 
-snap is a shell program that creates timestamped copies of files[*].  By default, the timestamp in the file name of each copy represents the mtime of the original file.
+snap is a shell program that creates timestamped copies of regular files.  By default, the timestamp in the file name of each copy represents the mtime of the original file.
 
 ## Why snap?
 
