@@ -27,7 +27,7 @@ Many do.  But here are some advantages of using snap:
 ## Examples
 
 ```
-     # includes a non-existent file, a device file, a root directory file, and a non-readble file
+     # include a non-existent file, a device file, a root directory file, and a non-readble file
 $ snap zzzzz /dev/null /installer.failurerequests ~/tmp/noread ~/bin/gpgedit gmvault.log ; echo status=$?
 snap: skipping 'zzzzz': can't stat
 snap: skipping '/dev/null': not regular file
