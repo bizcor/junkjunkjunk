@@ -10,10 +10,10 @@ If GIT_VDIFF_DEBUG is set in the environment, then list all parsed data rather t
 
 ## my usage
 
-Example:
+Examples:
 
 ```
-$ export GIT_VDIFF_USER=bizcor ~/projects/bizcor/some-project ; git-vdiff | grep some-specific-file > some-output-file
+$ ( unset ALWAYS_INCLUDE ; unset GIT_VDIFF_DEBUG ; export GIT_VDIFF_USER=bizcor ; ~/projects/bizcor/git-vdiff/bin/git-vdiff.py ~/projects/bizcor/junkjunkjunk/ )
 ```
 
 Then I edit some-output-file.  In vim, I have the following command defined:
