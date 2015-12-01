@@ -1,6 +1,6 @@
 # git-vdiff
 
-A utility program I wrote to help me see git diffs visually.  Prints to stdout vimdiff invocations.  Sometimes I want "more" than unified diff output in the terminal.  Each invocation compares a file in a commit with its previous version.
+A utility program I wrote to help me see git diffs visually.  Prints to stdout vimdiff invocations.  Sometimes I want more than unified diff output in the terminal.  Each invocation compares a file in a commit with its previous version.
 
 If GIT_VDIFF_USER is set in the environment, the program uses it as a search string to identify the author whose commits should be examined.  If GIT_VDIFF_USER is not set, the value of USER in the environment is used.
 
