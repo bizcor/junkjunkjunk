@@ -13,7 +13,7 @@ If GIT_VDIFF_DEBUG is set in the environment, then list all parsed data rather t
 Example:
 
 ```
-$ export GIT_VDIFF_USER=bizcor ; git-vdiff | grep some-specific-file > some-output-file
+$ export GIT_VDIFF_USER=bizcor ~/projects/bizcor/some-project ; git-vdiff | grep some-specific-file > some-output-file
 ```
 
 Then I edit some-output-file.  In vim, I have the following command defined:
