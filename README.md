@@ -25,3 +25,9 @@ Then I edit some-output-file.  In vim, I have the following command defined:
     Exec        0                    :.w !bash
 [...]
 ```
+
+Then I place the cursor on each line in turn and do:
+
+```
+:Exec<return>
+```
